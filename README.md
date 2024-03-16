@@ -1,50 +1,52 @@
-# React GitHub Calendar
-
-[![CI](https://github.com/grubersjoe/react-github-calendar/actions/workflows/test.yml/badge.svg)](https://github.com/grubersjoe/react-github-calendar/actions/workflows/test.yml)
+# React GitHub Contributions
 
 A React component to display a GitHub contributions graph based on
 [`react-activity-calendar`](https://github.com/grubersjoe/react-activity-calendar).
 
-![Screenshot](preview.png?v3)
+![Screenshot](preview.png)
 
-[Demo and documentation](https://grubersjoe.github.io/react-github-calendar/)
 
 ## Installation
 
 ```shell
-npm install react-github-calendar
+npm install react-github-contributions
 ```
 
-## Development
+## Development-Demo
 
-Start watch mode for the library first:
+```
+import GitHubContributions from "react-github-contributions"
 
-```shell
-pnpm install
-pnpm dev
+// ... in your render() method:
+
+<GitHubContributions username="{your username}"/>
 ```
 
-Then start watch mode of example page:
+## Example in .jsx
 
-```shell
-cd example
-pnpm install
-pnpm dev
+```bash
+import React from 'react';
+import { render } from 'react-dom';
+import { GitHubContributions } from 'react-github-contributions';
+
+const App = () => {
+  return (
+    <div className="App">
+      <GitHubContributions
+        username="your-github-username"
+        config={{
+          contributionsPerPage: 10,
+          theme: 'light',
+        }}
+      />
+    </div>
+  );
+};
+
+render(<App />, document.getElementById('root'));
 ```
 
-Open http://localhost:3000.
+## License
+This package is licensed under Apache-2.0
 
-## Publish a new release
-
-```shell
-npm publish --dry-run
-
-# When you're happy
-npm publish --access=public
-```
-
-### Update demo page
-
-```shell
-pnpm deploy
-```
+Happy Coding💻😎
