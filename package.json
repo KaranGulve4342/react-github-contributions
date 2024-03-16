@@ -1,6 +1,6 @@
 {
   "name": "react-github-contributions",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": " React  component to display GitHub contributions graph",
   "author": "Karan Gulve",
   "license": "Apache-2.0",
