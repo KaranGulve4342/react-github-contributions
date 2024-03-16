@@ -1,0 +1,13 @@
+node_modules/
+
+build/
+dist/
+
+example/src/react-app-env.d.ts
+
+.env.*
+.log*
+
+.vscode/
+.idea/
+.DS_Store
